@@ -1,46 +1,99 @@
 ---
 typ: algorytm
+egzamin: true
 status: do_nauczenia
+trudnosc:
 zlozonosc_czasowa:
 zlozonosc_pamieciowa:
-trudość:
+utworzono: <% tp.date.now("YYYY-MM-DD") %>
+powiazania:
+  - "[[Index_Egzamin]]"
 ---
 
-> [!abstract] Metadane
-> Typ: #algorytm
-> **Status:** #do_opanowania 
-> **Powiązania:** [[Index_Egzamin]]
+# <% tp.file.title %>
 
-## 📝 Definicja i Cel
-Tu opisz krótko, co robi algorytm i jaki problem rozwiązuje.
+> [!abstract] Cel egzaminacyjny
+> Umiem wyjaśnić działanie algorytmu i przejść go krok po kroku na konkretnych danych.
 
-## 🧮 Złożoność
-| Przypadek | Złożoność |
-| :--- | :--- |
-| Czasowa | O(...) |
-| Pamięciowa | O(...) |
+## Problem
 
-## 💻 Pseudokod
-```javascript
-# Wklej tutaj pseudokod lub kod w swoim języku
+**Wejście:**  
+**Wyjście:**  
+**Co algorytm ma znaleźć / policzyć / skonstruować:**  
+
+## Idea
+
+1. 
+2. 
+3. 
+
+## Kiedy stosować
+
+- 
+- 
+- 
+
+## Pseudokod
+
+```text
 
 ```
 
-## 🗣️ Tłumaczenie "na ludzki język"
+## Przebieg na przykładzie
 
-> [!info] Intuicja
-> Tutaj napisz swoimi słowami, jak działa ten algorytm. Wyobraź sobie, że tłumaczesz to koledze przy kawie. Dlaczego to w ogóle działa?
+> [!example] Najważniejsza część notatki
+> Ten przykład ma być na tyle konkretny, żebym potrafił odtworzyć działanie algorytmu bez patrzenia w pseudokod.
 
-## 💡 Przykład działania
+**Dane wejściowe:**  
 
-> [!example] Krok po kroku
-> Tutaj rozpisz przykład na konkretnych danych (np. dla tablicy [3, 1, 4]).
-> 1. Krok pierwszy...
-> 2. Krok drugi...
-> 
-> 
+**Kroki:**
+1. 
+2. 
+3. 
+4. 
 
-## 🔗 Dowody i Odniesienia
+**Wynik:**  
 
-* Twierdzenia: [[Dowód X]]
-* Źródło: (link do PDF/wykładu)
+## Złożoność
+
+| Rodzaj | Złożoność | Skąd się bierze |
+| :--- | :--- | :--- |
+| Czasowa | `O(...)` |  |
+| Pamięciowa | `O(...)` |  |
+
+> [!warning] Typowe pułapki
+> - 
+> - 
+> - 
+
+## Checklista egzaminacyjna
+
+- [ ] podać problem, wejście i wyjście
+- [ ] wyjaśnić ideę własnymi słowami
+- [ ] zapisać lub odtworzyć pseudokod
+- [ ] przejść algorytm na konkretnych danych
+- [ ] podać złożoność czasową i pamięciową
+- [ ] wskazać typowe pułapki
+
+## Mini-fiszki
+
+**Q:** Co rozwiązuje ten algorytm?  
+**A:** 
+
+**Q:** Jaka jest główna idea?  
+**A:** 
+
+**Q:** Jaka jest złożoność czasowa i dlaczego?  
+**A:** 
+
+**Q:** Jak wygląda pierwszy nietrywialny krok na przykładzie?  
+**A:** 
+
+## Powiązania i źródła
+
+**Źródła:**
+- [[AZ.pdf]]
+- 
+
+**Powiązane twierdzenia / pojęcia:**
+- 
