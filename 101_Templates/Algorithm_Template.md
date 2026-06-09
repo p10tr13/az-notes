@@ -3,8 +3,6 @@ typ: algorytm
 egzamin: true
 status: do_nauczenia
 trudnosc:
-zlozonosc_czasowa:
-zlozonosc_pamieciowa:
 utworzono: <% tp.date.now("YYYY-MM-DD") %>
 powiazania:
   - "[[Index_Egzamin]]"

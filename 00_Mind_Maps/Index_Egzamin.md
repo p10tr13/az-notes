@@ -30,7 +30,7 @@
 - [ ] [[Approx-Vertex-Cover]]
 - [ ] [[Exact-Subset-Sum]]
 - [ ] [[Approx-Subset-Sum]]
-- [ ] [[MM znajdujący maksymalne skojarzenie w grafie dwudzielnym]]
+- [ ] [[MM znajdujący maksymalne skojarzenie w grafie dwudzielnym (Hopcroft-Karp)]]
 
 ### Dashboard algorytmów
 
