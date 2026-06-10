@@ -2,7 +2,7 @@
 typ: algorytm
 egzamin: true
 status: do_nauczenia
-trudnosc: "3"
+trudnosc: "1"
 utworzono: 2026-06-09
 powiazania:
   - "[[Index_Egzamin]]"

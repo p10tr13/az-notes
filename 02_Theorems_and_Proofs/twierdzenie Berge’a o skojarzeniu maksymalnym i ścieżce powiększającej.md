@@ -2,7 +2,7 @@
 typ: twierdzenie
 egzamin: true
 status: do_nauczenia
-trudnosc: "4"
+trudnosc: "3"
 utworzono: 2026-06-03
 powiazania:
   - "[[Index_Egzamin]]"
