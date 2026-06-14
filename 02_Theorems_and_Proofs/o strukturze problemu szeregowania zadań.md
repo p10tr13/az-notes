@@ -102,5 +102,5 @@ Musimy udowodnić, że zadania o jednostkowym czasie z określonymi terminami tw
 - [[AZ.pdf]] (Algorytmy zachłanne - Algorytm szeregowania zadań) 
 
 **Powiązane algorytmy / pojęcia:**
-- Definicja matroidu (własność dziedziczności i wymiany) 
-- Harmonogramowanie zadań z terminami i karami 
+- [[Matroid]]
+- [[szeregowania zadań]]

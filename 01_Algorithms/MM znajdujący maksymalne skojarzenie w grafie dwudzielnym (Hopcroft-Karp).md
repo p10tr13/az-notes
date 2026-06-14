@@ -8,6 +8,7 @@ powiazania:
   - "[[Index_Egzamin]]"
 ---
 
+
 # MM znajdujący maksymalne skojarzenie w grafie dwudzielnym
 
 > [!abstract] Cel egzaminacyjny
@@ -172,9 +173,9 @@ Początkowo skojarzenie $M = \emptyset$.
 
 ## Checklista egzaminacyjna
 
-* [ ] podać problem, wejście i wyjście
-* [ ] wyjaśnić ideę własnymi słowami
-* [ ] zapisać lub odtworzyć pseudokod
+* [x] podać problem, wejście i wyjście ✅ 2026-06-11
+* [x] wyjaśnić ideę własnymi słowami ✅ 2026-06-11
+* [x] zapisać lub odtworzyć pseudokod ✅ 2026-06-11
 * [ ] przejść algorytm na konkretnych danych
 * [ ] podać złożoność czasową i pamięciową
 * [ ] wskazać typowe pułapki

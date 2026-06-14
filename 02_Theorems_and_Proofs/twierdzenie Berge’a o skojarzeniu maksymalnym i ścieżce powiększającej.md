@@ -71,12 +71,12 @@ Dowodzimy twierdzenia Berge'a niewprost. Zakładamy, że nasze skojarzenie M wca
 
 ## Checklista egzaminacyjna
 
-- [ ] podać pełną treść twierdzenia
+- [x] podać pełną treść twierdzenia ✅ 2026-06-11
 - [ ] wymienić założenia
-- [ ] powiedzieć, co dokładnie trzeba udowodnić
-- [ ] odtworzyć szkielet dowodu
-- [ ] odtworzyć pełny dowód
-- [ ] wyjaśnić intuicję dowodu własnymi słowami
+- [x] powiedzieć, co dokładnie trzeba udowodnić ✅ 2026-06-11
+- [x] odtworzyć szkielet dowodu ✅ 2026-06-11
+- [x] odtworzyć pełny dowód ✅ 2026-06-11
+- [x] wyjaśnić intuicję dowodu własnymi słowami ✅ 2026-06-11
 - [ ] wskazać typowe pułapki
 
 ## Mini-fiszki
