@@ -24,47 +24,13 @@ powiazania:
 - $\mathcal{C}$ oznacza rodzinę podzbiorów niezależnych zbioru $S$.
 - Zbiór zadań uznaje się za niezależny, jeżeli przy uporządkowaniu zadań niemalejąco według dopuszczalnego terminu wykonania żadne zadanie nie jest spóźnione (zgodnie z Lematem 1).
 
-## Co trzeba pokazać
-
-Należy udowodnić, że para $(S, \mathcal{C})$ spełnia dwa fundamentalne warunki definicyjne matroidu:
-1. **Dziedziczność**: Każdy podzbiór niezależnego zbioru zadań jest również zbiorem niezależnym.
-2. **Własność wymiany**: Dla dowolnych dwóch podzbiorów niezależnych $A, B \in \mathcal{C}$, gdzie $|B| > |A|$, istnieje takie zadanie $x \in B \setminus A$, że zbiór $A' = A \cup \{x\}$ pozostaje niezależny.
-
-## Intuicja
-
-Dlaczego to twierdzenie jest prawdziwe i po co jest potrzebne?
-Twierdzenie to dowodzi, że problem optymalnego szeregowania zadań o jednostkowym czasie trwania posiada strukturę matroidu. Jest to kluczowa informacja z punktu widzenia projektowania algorytmów, ponieważ dla struktur będących matroidami algorytmy zachłanne (np. wybierające zadania w kolejności nierosnących wag/kar) gwarantują znalezienie rozwiązania całkowicie optymalnego. Własność wymiany mówi nam intuicyjnie tyle, że jeśli mamy większy poprawny zestaw zadań ($B$) oraz mniejszy ($A$), to w tym większym zawsze znajdziemy co najmniej jedno zadanie, które możemy bezpiecznie przenieść do mniejszego zestawu i tak zmodyfikować harmonogram, że żadne zadanie nadal nie przekroczy swojego terminu.
-
-## Szkielet dowodu
-
-> [!tip] Plan dowodu
-> 1. Wykazanie dziedziczności jako cechy oczywistej dla podzbiorów zadań.  
-> 2. Założenie niezależności zbiorów $A$ i $B$ oraz relacji rozmiarów $|B| > |A|$ w celu wykazania własności wymiany.  
-> 3. Zdefiniowanie funkcji $N_t(A)$ jako liczby zadań ze zbioru $A$ z terminem wykonania nie większym niż $t$.  
-> 4. Zdefiniowanie parametru $k$ jako największego punktu czasowego $t$, dla którego zachodzi $N_t(B)\le N_t(A)$.  
-> 5. Uzasadnienie, że $k<n$, ponieważ dla $t=n$ mamy $N_n(B)=|B|>|A|=N_n(A)$.  
-> 6. Wykazanie, że dla każdego $t>k$ zachodzi $N_t(B)>N_t(A)$.  
-> 7. Wybranie zadania $x\in B\setminus A$ o dopuszczalnym terminie wykonania równym $k+1$.  
-> 8. Konstrukcja nowego zbioru $A'=A\cup\{x\}$.  
-> 9. Weryfikacja niezależności $A'$ przez sprawdzenie nierówności $N_t(A')\le t$ osobno dla $t\le k$ oraz dla $t>k$.
-
-## Pełny dowód
-
-- $S$ stanowi zbiór zadań, z których każde charakteryzuje się jednostkowym czasem wykonania.  
-- $\mathcal{C}$ oznacza rodzinę podzbiorów niezależnych zbioru $S$.  
-- Zbiór zadań uznaje się za niezależny, jeżeli przy uporządkowaniu zadań niemalejąco według dopuszczalnego terminu wykonania żadne zadanie nie jest spóźnione.  
-- $N_t(A)$ oznacza liczbę zadań ze zbioru $A$, których dopuszczalny termin wykonania jest nie większy niż $t$:  
-$$N_t(A)=|\{x\in A : d_x\le t\}|.$$  
-- Korzystamy z kryterium niezależności: zbiór $A$ jest niezależny wtedy i tylko wtedy, gdy dla każdego $t$ zachodzi:  
-$$N_t(A)\le t.$$  
-  
 ## Co trzeba pokazać  
   
 Należy udowodnić, że para $(S, \mathcal{C})$ spełnia dwa fundamentalne warunki definicyjne matroidu:  
   
 1. **Dziedziczność**: Każdy podzbiór niezależnego zbioru zadań jest również zbiorem niezależnym.  
-2. **Własność wymiany**: Dla dowolnych dwóch podzbiorów niezależnych $A, B \in \mathcal{C}$, gdzie $|B| > |A|$, istnieje takie zadanie $x \in B \setminus A$, że zbiór $A' = A \cup \{x\}$ pozostaje niezależny.  
-  
+2. **Własność wymiany**: Dla dowolnych dwóch podzbiorów niezależnych $A, B \in \mathcal{C}$, gdzie $|B| > |A|$, istnieje takie zadanie $x \in B \setminus A$, że zbiór $A' = A \cup \{x\}$ pozostaje niezależny.
+
 ## Intuicja  
   
 Dlaczego to twierdzenie jest prawdziwe i po co jest potrzebne?  
