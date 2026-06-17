@@ -2,7 +2,7 @@
 typ: twierdzenie
 egzamin: true
 status: do_nauczenia
-trudnosc: "5"
+trudnosc: "3"
 utworzono: 2026-06-03
 powiazania:
   - "[[Index_Egzamin]]"
@@ -19,23 +19,19 @@ powiazania:
 > W fazie łączenia ("Zwyciężaj") algorytmu Dziel i Zwyciężaj dla problemu pary najbliższych punktów, wystarczy sprawdzać odległości jedynie między rozpatrywanym punktem a co najwyżej 7 następującymi po nim punktami w posortowanej tablicy $Y^{\prime}$. 
 
 *(Uwaga: Algorytm jest poprawny w całości, a pierwszy warunek to trywialne ograniczenie rekursji dla $|P| \le 3$, by nie dzielić pojedynczego punktu. Główny dowód dotyczy ograniczenia liczby sprawdzanych punktów w pasie do 7).*
-
 ## Założenia
 
 - Zbiór punktów został podzielony pionową prostą $l$ na lewą połowę ($P_L$) i prawą ($P_R$).
 - Obliczono minimalną odległość dla punktów po lewej stronie ($\delta_L$) oraz po prawej stronie ($\delta_R$).
 - Określono minimum z tych dwóch odległości: $\delta = \min(\delta_L, \delta_R)$.
 - Tablica $Y^{\prime}$ zawiera wyłącznie punkty z pionowego pasa o szerokości $2\delta$ (po $\delta$ w każdą stronę od prostej $l$), posortowane rosnąco według współrzędnej $y$.
-
 ## Co trzeba pokazać
 
 Należy udowodnić, że w obszarze (prostokącie), w którym mogłaby się znajdować para punktów z różnych stron prostej $l$ leżących bliżej siebie niż $\delta$, z geometrycznych powodów nie da się fizycznie zmieścić więcej niż 8 punktów. Skoro w obszarze jest maksymalnie 8 punktów, to dla dowolnego punktu $p_L$ w tym obszarze, jego szukany sąsiad $p_R$ z drugiej strony prostej musi znajdować się na jednej z 7 kolejnych pozycji w tablicy $Y^{\prime}$.
-
 ## Intuicja
 
 Dlaczego to twierdzenie jest prawdziwe i po co jest potrzebne?
 Gdy łączymy lewą i prawą stronę, boimy się, że punkt leżący tuż przy granicy po lewej stronie może mieć bardzo blisko sąsiada po prawej stronie. Gdybyśmy chcieli sprawdzać każdy punkt w pasie granicznym z każdym innym, stracilibyśmy całą wydajność algorytmu Dziel i Zwyciężaj. Na szczęście, po obu stronach granicy punkty są "rozrzedzone" – wiemy przecież, że odległość między dowolnymi dwoma po tej samej stronie wynosi *co najmniej* $\delta$. To tak, jakby każdy punkt odpychał inne na odległość $\delta$. W małym prostokątnym oknie na granicy nie da się "upchnąć" wielu takich odpychających się punktów – wejdzie ich maksymalnie 8. Dzięki temu każdy punkt wystarczy porównać zaledwie z siedmioma sąsiadami.
-
 ## Szkielet dowodu
 
 > [!tip] Plan dowodu

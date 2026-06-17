@@ -1,8 +1,8 @@
 ---
 typ: twierdzenie
 egzamin: true
-status: do_nauczenia
-trudnosc: "5"
+status: do_powtorki
+trudnosc: "4"
 utworzono: 2026-06-02
 powiazania:
   - "[[Index_Egzamin]]"

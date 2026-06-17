@@ -1,7 +1,7 @@
 ---
 typ: twierdzenie
 egzamin: true
-status: do_nauczenia
+status: do_powtorki
 trudnosc: 4
 utworzono: 2026-06-03
 powiazania:
