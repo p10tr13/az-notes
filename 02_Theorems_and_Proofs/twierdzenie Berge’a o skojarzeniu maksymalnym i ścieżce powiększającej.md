@@ -1,7 +1,7 @@
 ---
 typ: twierdzenie
 egzamin: true
-status: nauczone
+status: opanowane
 trudnosc: "1"
 utworzono: 2026-06-03
 powiazania:

@@ -1,7 +1,7 @@
 ---
 typ: algorytm
 egzamin: true
-status: do_nauczenia
+status: opanowane
 trudnosc:
 utworzono: 2026-06-17
 powiazania:
