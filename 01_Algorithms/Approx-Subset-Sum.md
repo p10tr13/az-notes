@@ -1,8 +1,8 @@
 ---
 typ: algorytm
 egzamin: true
-status: do_nauczenia
-trudnosc:
+status: do_powtorki
+trudnosc: "1"
 utworzono: 2026-06-18
 powiazania:
   - "[[Index_Egzamin]]"
@@ -98,7 +98,6 @@ Startujemy z $L_0 = (0)$.
 * Bierzemy 0. ($last = 0$).
 * Sprawdzamy 10: czy $0 < 0.8 \cdot 10$? Tak ($0 < 8$). Bierzemy 10. ($last = 10$).
 
-
 * Limit $t=30$ nie przekroczony.
 * **$L_1 = (0, 10)$**.
 
@@ -121,7 +120,6 @@ graph LR
 * Sprawdzamy 11: $10 < 0.8 \cdot 11 \rightarrow 10 < 8.8$. **FAŁSZ!** Odrzucamy 11 (10 jest dobrym reprezentantem dla 11). ($last$ zostaje 10).
 * Sprawdzamy 21: $10 < 0.8 \cdot 21 \rightarrow 10 < 16.8$. **PRAWDA!** Bierzemy 21. ($last = 21$).
 
-
 * Limit $t=30$ nie przekroczony.
 * **$L_2 = (0, 10, 21)$**.
 
@@ -131,7 +129,7 @@ graph LR
         A["Scalone: (0, 10, 11, 21)"] --> B["Sprawdzanie 11: 10 < 8.8 ? Nie!"]
         B -.-> C["(0, 10, 21)"]
         
-        classDef dropped fill:#ffcdd2,stroke:#c62828,stroke-width:2px,text-decoration:line-through;
+        classDef dropped fill:#ffcdd2,stroke:#c62828,stroke-width:2px;
         class B dropped;
     end
 
@@ -147,7 +145,6 @@ graph LR
 * Sprawdzamy 21: $10 < 0.8 \cdot 21 \rightarrow 10 < 16.8$. **PRAWDA!** Bierzemy 21. ($last = 21$).
 * Sprawdzamy 22: $21 < 0.8 \cdot 22 \rightarrow 21 < 17.6$. **FAŁSZ!** Odrzucamy 22.
 * Sprawdzamy 33: $21 < 0.8 \cdot 33 \rightarrow 21 < 26.4$. **PRAWDA!** Bierzemy 33. ($last = 33$).
-
 
 * Lista po trimowaniu: $(0, 10, 21, 33)$.
 * **Odrzucamy $> 30$:** Wylatuje 33.

@@ -1,8 +1,8 @@
 ---
 typ: algorytm
 egzamin: true
-status: do_nauczenia
-trudnosc:
+status: do_powtorki
+trudnosc: "1"
 utworzono: 2026-06-18
 powiazania:
   - "[[Index_Egzamin]]"
@@ -135,10 +135,10 @@ graph TD
 
 ## Złożoność
 
-| Rodzaj | Złożoność | Skąd się bierze |
-| --- | --- | --- |
-| Czasowa | `O(\min(2^n, t))` | W najgorszym przypadku z każdą iteracją lista $L_i$ podwaja swoją długość ($1, 2, 4, 8...$), co prowadzi do złożoności wykładniczej $O(2^n)$, gdzie $n$ to liczba elementów. Złożoność jest też ograniczona przez limit $t$, bo długość listy na skutek odcięć nigdy nie przekroczy $t+1$. |
-| Pamięciowa | `O(\min(2^n, t))` | W danym momencie w pamięci przechowujemy listy z poprzedniego kroku, których maksymalna długość to $O(2^n)$ lub $O(t)$. |
+| Rodzaj     | Złożoność         | Skąd się bierze                                                                                                                                                                                                                                                                            |
+| ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Czasowa    | $O(\min(2^n, t))$ | W najgorszym przypadku z każdą iteracją lista $L_i$ podwaja swoją długość ($1, 2, 4, 8...$), co prowadzi do złożoności wykładniczej $O(2^n)$, gdzie $n$ to liczba elementów. Złożoność jest też ograniczona przez limit $t$, bo długość listy na skutek odcięć nigdy nie przekroczy $t+1$. |
+| Pamięciowa | $O(\min(2^n, t))$ | W danym momencie w pamięci przechowujemy listy z poprzedniego kroku, których maksymalna długość to $O(2^n)$ lub $O(t)$.                                                                                                                                                                    |
 
 > [!warning] Typowe pułapki
 > * Zapominanie o usuwaniu duplikatów przy scalaniu — jeśli dopuścisz do istnienia wielu tych samych wartości w listach pośrednich, długość listy wystrzeli w kosmos i zepsuje efektywność operacji scalania.
