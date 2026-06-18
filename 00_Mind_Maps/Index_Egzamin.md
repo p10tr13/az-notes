@@ -37,9 +37,7 @@
 ```dataview
 TABLE
   status AS "Status",
-  trudnosc AS "Trudność",
-  zlozonosc_czasowa AS "Czas",
-  zlozonosc_pamieciowa AS "Pamięć"
+  trudnosc AS "Trudność"
 FROM "01_Algorithms"
 SORT status ASC, file.name ASC
 ```

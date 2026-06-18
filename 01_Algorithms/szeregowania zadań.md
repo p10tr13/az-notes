@@ -2,7 +2,7 @@
 typ: algorytm
 egzamin: true
 status: opanowane
-trudnosc:
+trudnosc: "1"
 utworzono: 2026-06-14
 powiazania:
   - "[[Index_Egzamin]]"

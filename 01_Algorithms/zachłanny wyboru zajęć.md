@@ -1,8 +1,8 @@
 ---
 typ: algorytm
 egzamin: true
-status: do_nauczenia
-trudnosc:
+status: do_powtorki
+trudnosc: "1"
 utworzono: 2026-06-18
 powiazania:
   - "[[Index_Egzamin]]"
@@ -15,15 +15,15 @@ powiazania:
 
 ## Problem
 
-[cite_start]**Wejście:** Zbiór $n$ zajęć/zadań[cite: 1]. [cite_start]Każde zajęcie $i$ posiada określony czas rozpoczęcia $s_i$ oraz czas zakończenia $f_i$[cite: 1].
-[cite_start]**Wyjście:** Maksymalny liczbowo zbiór wzajemnie zgodnych zajęć[cite: 1]. Zajęcia są zgodne, jeśli ich przedziały czasowe nie nachodzą na siebie (czyli dla wybranych zajęć $i$ oraz $j$ zachodzi $s_i \ge f_j$ lub $s_j \ge f_i$).
+**Wejście:** Zbiór $n$ zajęć/zadań. Każde zajęcie $i$ posiada określony czas rozpoczęcia $s_i$ oraz czas zakończenia $f_i$.
+**Wyjście:** Maksymalny liczbowo zbiór wzajemnie zgodnych zajęć. Zajęcia są zgodne, jeśli ich przedziały czasowe nie nachodzą na siebie (czyli dla wybranych zajęć $i$ oraz $j$ zachodzi $s_i \ge f_j$ lub $s_j \ge f_i$).
 **Co algorytm ma znaleźć / policzyć / skonstruować:** Wybrać jak największą liczbę aktywności, które można zrealizować w ramach jednego zasobu (np. jedna sala wykładowa, jeden procesor jednordzeniowy), nie dopuszczając do konfliktów terminów.
 
 ## Idea
 
 1. **Sortowanie:** Kluczem do zachłannego sukcesu jest posortowanie wszystkich zajęć rosnąco według ich **czasów zakończenia ($f_i$)**. Intuicja: chcemy zawsze wybierać zadanie, które skończy się jak najwcześniej, zostawiając jak najwięcej wolnego czasu na kolejne aktywności.
-2. [cite_start]**Wybór początkowy:** Zawsze wybieramy pierwsze zajęcie z posortowanej listy[cite: 1]. Kończy się ono najwcześniej ze wszystkich, więc stanowi optymalny start.
-3. [cite_start]**Iteracja:** Przeglądamy kolejne zajęcia jedno po drugim[cite: 1]. [cite_start]Jeśli czas rozpoczęcia rozpatrywanego zajęcia jest większy bądź równy czasowi zakończenia *ostatnio zaakceptowanego* zajęcia ($s_i \ge f_j$) [cite: 1][cite_start], to dodajemy je do naszego zbioru i aktualizujemy wskaźnik ostatniego zajęcia[cite: 1]. W przeciwnym wypadku odrzucamy je, ponieważ nakłada się na już zaplanowany blok.
+2. **Wybór początkowy:** Zawsze wybieramy pierwsze zajęcie z posortowanej listy. Kończy się ono najwcześniej ze wszystkich, więc stanowi optymalny start.
+3. **Iteracja:** Przeglądamy kolejne zajęcia jedno po drugim. Jeśli czas rozpoczęcia rozpatrywanego zajęcia jest większy bądź równy czasowi zakończenia *ostatnio zaakceptowanego* zajęcia ($s_i \ge f_j$), to dodajemy je do naszego zbioru i aktualizujemy wskaźnik ostatniego zajęcia. W przeciwnym wypadku odrzucamy je, ponieważ nakłada się na już zaplanowany blok.
 
 ## Kiedy stosować
 
@@ -186,12 +186,10 @@ gantt
 
 ## Złożoność
 
-| Rodzaj | Złożoność | Skąd się bierze |
-| --- | --- | --- |
-| Czasowa | `O(n log n)` | Dominującą operacją jest wstępne posortowanie $n$ zajęć po czasie zakończenia ($O(n \log n)$). Sama pętla przechodząca przez zajęcia wykonuje się w czasie ściśle liniowym $O(n)$ , ponieważ każde zadanie sprawdzamy dokładnie raz. Podsumowując: $O(n \log n) + O(n) = O(n \log n)$.
-
- |
-| Pamięciowa | `O(n)` | Musimy przechować wejściową oraz posortowaną listę struktur danych reprezentujących zajęcia, a także listę wynikową. |
+| Rodzaj     | Złożoność    | Skąd się bierze                                                                                                                                                                                                                                                                        |
+| ---------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Czasowa    | $O(n\log n)$ | Dominującą operacją jest wstępne posortowanie $n$ zajęć po czasie zakończenia ($O(n \log n)$). Sama pętla przechodząca przez zajęcia wykonuje się w czasie ściśle liniowym $O(n)$ , ponieważ każde zadanie sprawdzamy dokładnie raz. Podsumowując: $O(n \log n) + O(n) = O(n \log n)$. |
+| Pamięciowa | $O(n)$       | Musimy przechować wejściową oraz posortowaną listę struktur danych reprezentujących zajęcia, a także listę wynikową.                                                                                                                                                                   |
 
 > [!warning] Typowe pułapki
 > * **Sortowanie po niewłaściwym parametrze:** Sortowanie po czasie *rozpoczęcia* ($s_i$) albo po *czasie trwania* ($f_i - s_i$) **nie gwarantuje** optymalnego wyniku globalnego. Gwarancję daje wyłącznie zachłanny wybór oparty na posortowaniu po czasie *zakończenia* ($f_i$).
