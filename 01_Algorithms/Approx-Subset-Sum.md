@@ -24,7 +24,7 @@ powiazania:
 1. Algorytm działa niemal identycznie jak `Exact-Subset-Sum` – w każdej iteracji dodaje nowy element do poprzedniej listy sum i scala obie listy.
 2. Różnica polega na zastosowaniu mechanizmu **Trimowania (przycinania)** po każdym scaleniu. 
 3. Trimowanie polega na usuwaniu z posortowanej listy takich wartości, które są "zbyt blisko" siebie. Jeśli w liście mamy np. 10 i 11, a nasza tolerancja błędu na to pozwala, wyrzucamy 11. Oszczędzamy pamięć i czas, godząc się na to, że nasza suma będzie reprezentowana przez nieco mniejsze "10".
-4. Definicja "bliskości": element $y_i$ zostaje wyrzucony, jeśli ostatnio zaakceptowany element jest większy lub równy $(1 - \delta) \cdot y_i$, gdzie $\delta = \epsilon / n$.
+4. Definicja "bliskości": element $y_i$ zostaje wyrzucony, jeśli ostatnio zaakceptowany element jest większy lub równy $(1 - \delta) \cdot y_i$, gdzie $\delta = \epsilon / 2n$.
 5. Na koniec standardowo usuwamy wartości przekraczające limit $t$. Dzięki trimowaniu lista nigdy nie puchnie do rozmiarów wykładniczych.
 
 ## Kiedy stosować
