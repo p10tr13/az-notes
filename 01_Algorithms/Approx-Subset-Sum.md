@@ -84,8 +84,8 @@ private List<int> Trim(List<int> L, double delta)
 > [!example] Najważniejsza część notatki
 > Ten przykład jest skrojony tak, aby idealnie pokazać działanie funkcji `Trim`. Pokaże, w jaki sposób bliskie siebie wartości są "zjadane" przez tolerancję błędu.
 
-**Dane wejściowe:** $S = \{10, 11, 12\}$. Limit $t = 30$. Parametr $\epsilon = 0.6$.
-**Wartość $\delta$:** $\delta = \frac{\epsilon}{n} = \frac{0.6}{3} = 0.2$.
+**Dane wejściowe:** $S = \{10, 11, 12\}$. Limit $t = 30$. Parametr $\epsilon = 1.2$.
+**Wartość $\delta$:** $\delta = \frac{\epsilon}{2n} = \frac{1.2}{6} = 0.2$.
 **Mnożnik trimowania:** Sprawdzamy czy $last < (1 - 0.2) \cdot y_i$, czyli czy **$last < 0.8 \cdot y_i$**.
 
 **Kroki algorytmu:**
